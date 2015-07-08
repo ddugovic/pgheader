@@ -1,0 +1,81 @@
+=head1 NAME
+
+pgheader - A utility to manipulate headers of Polyglot opening books.
+
+=head1 SYNPOPSIS
+
+pgheader <options> [<file>]
+
+=head1 DESCRIPTION
+
+pgheader is a utility to manipulate headers of Polyglot opening books.
+The Polyglot format is the defacto standard non-proprietary opening
+book format.  It is fully documented here
+
+http://hardy.uhasselt.be/Toga/book_format.html
+
+Historically Polyglot book files did not contain any metadata which is
+problematic for many reasons. Recently a backward compatible and
+extensible standard has emerged to add such metadata to Polyglot
+books. This standard is described here.
+ 
+http://hardy.uhasselt.be/Toga/pgheader-release/header.html
+
+pgheader implements v1.0 of this standard. In v1.0 the metadata
+consists of a list of variants supported by the book in addition
+to a comment section which typically includes license
+information, author data, source files etc...
+
+pgheader accepts the following options.
+
+=over 4
+
+=item B<-h>
+
+Print help.
+
+=item B<-l>
+
+Print the list of known variants.
+
+=item B<-s>
+
+Print the header.
+
+=item B<-S>
+
+Print the header data. This works even if the logical header is broken.
+
+=item B<-d>
+
+Delete the header. 
+
+=item B<-v>
+
+This is a comma separated list of supported variants. The variant
+list in the book will be replaced by the supplied list.
+
+=item B<-f>
+
+Force the inclusion of unknown variants.
+
+=item B<-c>
+
+This is a free format string which may contain newlines encoded as two 
+character strings "\n". The comment section will be replaced by
+the supplied string. 
+
+=back
+
+=head1 AUTHORS
+
+Michel Van den Bergh<michel.vandenbergh@uhasselt.be>
+
+=head1 EXIT STATUS
+
+pgheader return 0 on normal exit and a non-zero value if something goes
+wrong.
+
+=head1 SEE ALSO
+
+polyglot(6) 

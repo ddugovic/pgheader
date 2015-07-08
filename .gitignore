@@ -1,0 +1,14 @@
+Makefile
+autom4te.cache/
+compile
+config.h
+config.log
+config.status
+depcomp
+install-sh
+missing
+pgheader
+stamp-h1
+
+.deps
+*.o

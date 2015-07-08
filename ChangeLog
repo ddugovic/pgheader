@@ -1,0 +1,14 @@
+>1.0
+First released version.
+>1.0.1
+Make it (hopefully) impossible for pgheader to create non-compliant headers.
+>1.0.2
+Better handling of errors.
+>1.0.3
+Fix printing of octal chars with high bit set.
+>1.0.4
+Fix command parsing bug.
+Put in some clarifications about UTF-8 in header.html.
+Allow pgheader to print the list of known variants.
+>1.0.5
+Inverted boolean condition fixed (infile<->!infile).
